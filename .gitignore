@@ -1,0 +1,23 @@
+# Virtual environments
+venv/
+venv312/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment files
+.env
+
+# MLflow files
+mlruns/
+mlflow.db
+
+# Generated files
+confusion_matrix.png
+
+# Logs
+*.log
+
+# VS Code settings
+.vscode/
