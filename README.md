@@ -138,9 +138,6 @@ http://127.0.0.1:8000/docs
 
 ---
 
-# 👩‍💻 Author
-
-Your Name
 
 GitHub:
-https://github.com/your-username
+https://github.com/VIDYASHREE-U-HEGDE/machine_learning.git
