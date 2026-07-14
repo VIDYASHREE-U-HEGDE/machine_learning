@@ -1,6 +1,6 @@
 # 🚀 Customer Churn Prediction API
 
-A Machine Learning-based REST API that predicts whether a customer is likely to churn. The application is built using **FastAPI**, containerized using **Docker**, and deployed on **Render**.
+A Machine Learning-based REST API that predicts whether a customer is likely to churn. The application is built using **FastAPI**, containerized using **Docker**.
 
 ---
 
@@ -16,7 +16,6 @@ Customer churn prediction helps businesses identify customers who are likely to 
 - REST API developed with FastAPI
 - Interactive Swagger API Documentation
 - Dockerized Application
-- Cloud Deployment using Render
 
 ---
 
@@ -31,31 +30,26 @@ Customer churn prediction helps businesses identify customers who are likely to 
 - Docker
 - Git
 - GitHub
-- Render
 
 ---
 
 # 📁 Project Structure
 
-```
+```text
 Customer_churn_prediction/
 │
-├── app.py
-├── model.py
-├── churn_model.joblib
-├── dataset.csv
+├── api/
+│   └── app.py
+├── src/
+│   └── train.py
+├── models/
+│   └── churn_model.pkl
+├── data/
+│   └── customer_churn.csv
 ├── Dockerfile
 ├── requirements.txt
 ├── README.md
 ```
-
----
-
-# 🌐 Live Demo
-
-Swagger Documentation
-
-https://your-render-url.onrender.com/docs
 
 ---
 
@@ -72,16 +66,14 @@ https://your-render-url.onrender.com/docs
 
 ```json
 {
+  "Gender": "Female",
   "Age": 35,
-  "Gender": "Male",
   "Tenure": 12,
-  "Usage_Frequency": 15,
-  "Support_Calls": 2,
-  "Payment_Delay": 1,
-  "Subscription_Type": "Premium",
-  "Contract_Length": "Annual",
-  "Total_Spend": 500.5,
-  "Last_Interaction": 7
+  "MonthlyCharges": 70.5,
+  "TotalCharges": 850.0,
+  "ContractType": "Month-to-month",
+  "InternetService": "Fiber optic",
+  "PaymentMethod": "Electronic check"
 }
 ```
 
@@ -91,7 +83,15 @@ https://your-render-url.onrender.com/docs
 
 ```json
 {
-  "prediction": 1
+  "prediction": "Customer will stay"
+}
+```
+
+or
+
+```json
+{
+  "prediction": "Customer will churn"
 }
 ```
 
@@ -102,13 +102,13 @@ https://your-render-url.onrender.com/docs
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/username/Customer_churn_prediction.git
+git clone https://github.com/VIDYASHREE-U-HEGDE/machine_learning.git
 ```
 
 ### Navigate to the Project
 
 ```bash
-cd Customer_churn_prediction
+cd machine_learning
 ```
 
 ### Install Dependencies
@@ -119,13 +119,15 @@ pip install -r requirements.txt
 
 ### Run the Application
 
+If `app.py` is inside the **api** folder:
+
 ```bash
-uvicorn app:app --reload
+uvicorn api.app:app --reload
 ```
 
-Open:
+Open the API documentation in your browser:
 
-```
+```text
 http://127.0.0.1:8000/docs
 ```
 
@@ -133,11 +135,19 @@ http://127.0.0.1:8000/docs
 
 # 📊 Machine Learning Model
 
-- Algorithm: Random Forest Classifier
-- Target: Customer Churn Prediction
+- **Algorithm:** Random Forest Classifier
+- **Target:** Customer Churn Prediction
 
 ---
 
+# 🔗 GitHub Repository
 
-GitHub:
-https://github.com/VIDYASHREE-U-HEGDE/machine_learning.git
+https://github.com/VIDYASHREE-U-HEGDE/machine_learning
+
+---
+
+# 👩‍💻 Author
+
+**Vidyashree U Hegde**
+
+GitHub: https://github.com/VIDYASHREE-U-HEGDE
